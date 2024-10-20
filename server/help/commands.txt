@@ -1,0 +1,21 @@
+1. start project server
+
+poetry install
+
+python run.py
+
+
+2. DOCKER
+# Збірка Docker-образу
+docker build -t my-fastapi-app .
+
+# Запуск контейнера
+docker run -d -p 8000:8000 my-fastapi-app
+
+
+
+poetry env use /usr/bin/python3.12
+
+
+sudo systemctl status mongod
+sudo systemctl start mongod

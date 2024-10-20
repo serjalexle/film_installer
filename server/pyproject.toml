@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "server"
+version = "0.1.0"
+description = ""
+authors = ["Serhii Lesyk <97725518+serjalexle@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.115.2"
+uvicorn = "^0.32.0"
+loguru = "^0.7.2"
+python-dotenv = "^1.0.1"
+pydantic = "^2.9.2"
+apscheduler = "^3.10.4"
+aiohttp = "^3.10.10"
+selenium = "^4.25.0"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.32.3"
+python-telegram-bot = "^21.6"
+motor = "^3.6.0"
+beanie = "^1.27.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,10 @@
+
+# Build the image using the Dockerfile in the current directory
+docker build -t https-lab .
+
+# List all images that are locally stored with the Docker Engine
+docker run -d -p 443:443 https-lab
+
+# Run a container from the image you just created
+docker ps
+
