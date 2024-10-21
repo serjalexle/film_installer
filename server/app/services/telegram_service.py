@@ -88,10 +88,6 @@ class TelegramService:
 
     @staticmethod
     async def send_posts(posts):
-        print(posts)
-        request = HTTPXRequest(connect_timeout=300, read_timeout=600)
-        bot = Bot(token=TOKEN, request=request)
-        
         try:
             for post in posts:
                 # Перевірка, чи пост має всі необхідні ключі
@@ -110,6 +106,23 @@ class TelegramService:
                 print("Відео успішно відправлено")
 
             return {"status": "success", "message": "Пости відправлено"}
+
+        except Exception as e:
+            print(f"Помилка: {str(e)}")
+            return {"status": "error", "message": str(e)}
+
+    @staticmethod
+    async def send_video(video_path: str = "testvideo.mp4"):
+        try:
+            with open(video_path, "rb") as video_file:
+                # Відправляємо відео частинами
+                await bot.send_video(
+                    chat_id=CHAT_ID,
+                    video="trailer.mp4",
+                )
+
+            print("Відео успішно відправлено")
+            return {"status": "success", "message": "Відео відправлено"}
 
         except Exception as e:
             print(f"Помилка: {str(e)}")

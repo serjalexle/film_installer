@@ -10,7 +10,7 @@ from app.services.parse_service import ParseService
 async def get_five_films_from_uakino():
     movies = []
 
-    page_count = 1
+    page_count = 17
 
     while len(movies) < 5:
         print(f"Парсимо сторінку {page_count}. Загальна кількість фільмів: {len(movies)}")
@@ -45,7 +45,7 @@ async def get_five_films_from_uakino():
 
     # якщо фільмів більше 5, то обрізаємо список
 
-    movies = movies[:5]
+    movies = movies[:1]
 
     for movie in movies:
         # отримуємо деталі фільму
