@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 const Home = () => {
   const [loading, setLoading] = useState(false);
 
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(0);
 
   const [content, setContent] = useState<any>(null);
 
