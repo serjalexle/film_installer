@@ -10,12 +10,7 @@ const Home = () => {
 
   const [step, setStep] = useState(2);
 
-  const [content, setContent] = useState<any>({
-    time_ms: 1730327197740,
-    citation: "Секрет успіху — це почати діяти.",
-    author: "",
-    photo_search_url: "https://www.pexels.com/uk-ua/search/успіх",
-  });
+  const [content, setContent] = useState<any>(null);
 
   const handleGenerateContent = async () => {
     setLoading(true);
@@ -53,6 +48,8 @@ const Home = () => {
   const handleGenerateVideoContent = async () => {
     console.log("Video content generated");
     toast.success("Video content generated successfully");
+    setContent(null);
+    setStep(0);
   };
 
   // const handleCopy = () => {
