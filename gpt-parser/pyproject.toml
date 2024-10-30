@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "gpt-parser"
+version = "0.1.0"
+description = ""
+authors = ["Serhii Lesyk <97725518+serjalexle@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "^4.25.0"
+loguru = "^0.7.2"
+gtts = "^2.5.3"
+pygame = "^2.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

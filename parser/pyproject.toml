@@ -1,0 +1,22 @@
+[tool.poetry]
+package-mode = false
+name = "desktop-encryptor"
+version = "0.1.0"
+description = ""
+authors = ["Serhii Lesyk <97725518+serjalexle@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ffmpeg = "^1.4"
+moviepy = "^1.0.3"
+numpy = ">=1.18,<1.27"
+librosa = "^0.10.2.post1"
+opencv-python = "^4.10.0.84"
+loguru = "^0.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

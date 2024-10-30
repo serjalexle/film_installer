@@ -26,7 +26,7 @@ root_router = APIRouter(
 )
 
 
-@root_router.post("/generate_content")
+@root_router.post("/generate_content", include_in_schema=False)
 async def generate_content():
     try:
         # отримую фільми з uakino
@@ -63,7 +63,7 @@ async def generate_content():
         print(f"Помилка: {str(e)}")
 
 
-@root_router.get("/generate_video")
+@root_router.get("/generate_video", include_in_schema=False)
 async def generate_video():
     try:
         # Відкриваємо файл фільму
@@ -81,9 +81,10 @@ async def generate_video():
 
         for epic_time in epic_times_list:
             # Вибираємо частину відео
-            clip_part = video.subclip(epic_time["start_time"], epic_time["start_time"] + epic_time["duration"])
+            clip_part = video.subclip(
+                epic_time["start_time"], epic_time["start_time"] + epic_time["duration"]
+            )
             clip_parts.append(clip_part)
-
 
         text = TextClip("Film name", fontsize=70, color="red")
         text = text.set_duration(5).set_position(("center", "top"))

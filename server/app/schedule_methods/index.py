@@ -9,10 +9,10 @@ from app.routes.root import generate_content
 
 
 tasks = [
-    {
-        "func": generate_content,
-        "interval": {"minutes": 60, "jitter": 10},
-    },
+    # {
+    #     "func": generate_content,
+    #     "interval": {"minutes": 60, "jitter": 10},
+    # },
 ]
 
 
